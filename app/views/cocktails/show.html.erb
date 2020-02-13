@@ -6,8 +6,11 @@
 
 <div class="container">
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">ingredient.name, ingredient.description</li>
+
+    <li class="list-group-item"><%= @cocktail.doses.first.description %> | <%= @cocktail.doses.first.ingredient.name %></li>
   </ul>
+
+  <%= link_to("Add ingredient", new_cocktail_dose_path(@cocktail)) %>
 </div>
 
 
