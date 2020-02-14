@@ -1,7 +1,9 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));">
   <div class="container">
-    <%= cl_image_tag("noa9rcishynqifqrku2i",
+    <% if @cocktail.photo.attached? %>
+    <%= cl_image_tag(@cocktail.photo.key,
       width: 400, height: 300, crop: :fill) %>
+      <% end %>
     <h1><%= @cocktail.name %></h1>
   </div>
 </div>
